@@ -1939,4 +1939,331 @@ All colors MUST be HSL.
       display: none;
     }
   }
+
+  /* Content Animated Icons */
+  .animated-content-icon {
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  /* Voice Recording Animation */
+  .voice-recording-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .animated-content-recording {
+    animation: recording-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes recording-pulse {
+    0%, 100% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  .voice-waves-indicator {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2px;
+  }
+
+  .wave-line {
+    width: 2px;
+    height: 4px;
+    background: hsl(var(--primary));
+    border-radius: 1px;
+    animation: wave-line-bounce 1.5s ease-in-out infinite;
+  }
+
+  @keyframes wave-line-bounce {
+    0%, 100% { height: 4px; opacity: 0.5; }
+    25% { height: 12px; opacity: 1; }
+    50% { height: 8px; opacity: 0.8; }
+    75% { height: 16px; opacity: 1; }
+  }
+
+  /* AI Processing Animation */
+  .ai-processing-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .animated-content-ai-processing {
+    animation: ai-thinking 3s ease-in-out infinite;
+  }
+
+  @keyframes ai-thinking {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1) rotate(0deg);
+    }
+    33% {
+      opacity: 1;
+      transform: scale(1.15) rotate(5deg);
+    }
+    66% {
+      opacity: 0.8;
+      transform: scale(1.05) rotate(-3deg);
+    }
+  }
+
+  .neural-pulses {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .neural-pulse {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid hsl(var(--accent));
+    border-radius: 50%;
+    opacity: 0;
+    animation: neural-wave 2s ease-out infinite;
+  }
+
+  @keyframes neural-wave {
+    0% {
+      opacity: 1;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2.5);
+    }
+  }
+
+  /* Maintenance Animation */
+  .maintenance-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .animated-content-maintenance {
+    animation: maintenance-work 4s ease-in-out infinite;
+  }
+
+  @keyframes maintenance-work {
+    0%, 100% {
+      opacity: 0.8;
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      opacity: 1;
+      transform: scale(1.1) rotate(15deg);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.05) rotate(-10deg);
+    }
+    75% {
+      opacity: 1;
+      transform: scale(1.1) rotate(20deg);
+    }
+  }
+
+  .maintenance-gear {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    animation: gear-spin 3s linear infinite;
+  }
+
+  @keyframes gear-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Inventory Animation */
+  .inventory-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .animated-content-inventory {
+    animation: inventory-update 3s ease-in-out infinite;
+  }
+
+  @keyframes inventory-update {
+    0%, 100% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  .inventory-arrows {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .inventory-arrow-1 {
+    animation: arrow-move-1 2s ease-in-out infinite;
+  }
+
+  .inventory-arrow-2 {
+    animation: arrow-move-2 2s ease-in-out infinite 0.5s;
+  }
+
+  @keyframes arrow-move-1 {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translateX(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(5px);
+    }
+  }
+
+  @keyframes arrow-move-2 {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translateX(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(5px);
+    }
+  }
+
+  /* Analytics Animation */
+  .analytics-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .animated-content-analytics {
+    animation: analytics-pulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes analytics-pulse {
+    0%, 100% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+  }
+
+  .chart-bars {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1px;
+  }
+
+  .chart-bar {
+    width: 2px;
+    background: hsl(var(--primary));
+    border-radius: 1px;
+    animation: chart-bar-grow 2s ease-in-out infinite;
+  }
+
+  @keyframes chart-bar-grow {
+    0%, 100% { 
+      height: 20%; 
+      opacity: 0.5; 
+    }
+    50% { 
+      height: 100%; 
+      opacity: 1; 
+    }
+  }
+
+  /* Communication Animation */
+  .communication-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .animated-content-communication {
+    animation: communication-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes communication-bounce {
+    0%, 100% {
+      opacity: 0.8;
+      transform: scale(1) translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1) translateY(-3px);
+    }
+  }
+
+  .message-dots {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    gap: 1px;
+  }
+
+  .message-dot {
+    width: 3px;
+    height: 3px;
+    background: hsl(var(--accent));
+    border-radius: 50%;
+    animation: message-dot-pop 1.5s ease-in-out infinite;
+  }
+
+  @keyframes message-dot-pop {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  /* Responsive adjustments for content animations */
+  @media (max-width: 768px) {
+    .voice-waves-indicator {
+      bottom: -6px;
+    }
+    
+    .wave-line {
+      width: 1.5px;
+    }
+    
+    .neural-pulse {
+      width: 15px;
+      height: 15px;
+    }
+    
+    .chart-bars {
+      bottom: -8px;
+    }
+    
+    .message-dots {
+      top: -3px;
+      right: -3px;
+    }
+  }
 }

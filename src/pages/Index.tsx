@@ -7,6 +7,10 @@ import { InteractiveFeatures } from "@/components/InteractiveFeatures";
 import { InteractiveFeatures as CenteredFeatures } from "@/components/CenteredFeatures";
 import { TechDecorators, SparkleEffects, EnergyFlow, DataParticles } from "@/components/AdvancedDecorators";
 import { FloatingDecorators, SectionBackground } from "@/components/AnimatedDecorators";
+import { 
+  VoiceRecordingIcon, AIProcessingIcon, MaintenanceIcon, InventoryIcon, 
+  AnalyticsIcon, CommunicationIcon, MonitoringIcon 
+} from "@/components/ContentAnimatedIcons";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { CalendarDays, Users, Zap, Clock, Shield, Star, ArrowRight, CheckCircle2, MessageCircle, Plus, Minus, Mic, Package, BarChart3, Brain, Lock, Settings, Calculator, Gem, Target, Layers3, Database, Monitor, Building2, MapPin, Phone, Mail, Search, Smartphone, FileText, UserCog, Headphones, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -111,9 +115,18 @@ const Index = () => {
                   Juntify es la primera plataforma de IA que comprende el lenguaje técnico de tu planta y transforma comunicaciones verbales en sistemas inteligentes de gestión industrial. No más reportes perdidos, no más información fragmentada, no más decisiones basadas en suposiciones.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 mt-8">
-                  
-                  
-                  
+                  <div className="flex flex-col items-center gap-3 p-6">
+                    <VoiceRecordingIcon />
+                    <span className="text-sm text-muted-foreground">Captura Inteligente</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-3 p-6">
+                    <AIProcessingIcon />
+                    <span className="text-sm text-muted-foreground">Procesamiento IA</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-3 p-6">
+                    <AnalyticsIcon />
+                    <span className="text-sm text-muted-foreground">Análisis Avanzado</span>
+                  </div>
                 </div>
               </div>
               
@@ -123,9 +136,9 @@ const Index = () => {
                   <DialogTrigger asChild>
                     <div className="liquid-glass-intense p-6 cursor-pointer transition-all duration-300 hover:shadow-elegant group">
                       <div className="flex items-start gap-4">
-                        <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                          <Mic className="h-6 w-6 text-primary" />
-                        </div>
+                         <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors flex items-center justify-center">
+                           <VoiceRecordingIcon />
+                         </div>
                         <div className="flex-1">
                           <h4 className="font-medium text-foreground mb-2 group-hover:text-primary transition-colors">Captura de Voz Inteligente</h4>
                           <p className="text-sm text-muted-foreground mb-3">Base Juntify - Grabación y transcripción automática</p>
