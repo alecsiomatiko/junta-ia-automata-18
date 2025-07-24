@@ -64,7 +64,7 @@ const FeatureCard = ({
         </div>
       </DialogTrigger>
       
-      <DialogContent className="max-w-5xl bg-background/95 backdrop-blur-xl border-white/20 max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-5xl bg-background/95 backdrop-blur-xl border-white/20 max-h-[90vh] overflow-y-auto z-[100]">
         <DialogHeader className="space-y-4">
           <DialogTitle className="flex items-center gap-4 text-2xl">
             <div className={`p-4 rounded-2xl bg-gradient-to-br from-${color}/20 to-${color}/5 border border-${color}/20`}>

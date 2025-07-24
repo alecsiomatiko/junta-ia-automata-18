@@ -64,7 +64,7 @@ const FeatureCard = ({ icon, title, description, svgComponent, color, delay, isA
         </div>
       </DialogTrigger>
       
-      <DialogContent className="max-w-4xl liquid-glass border-white/20 max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-4xl liquid-glass border-white/20 max-h-[90vh] overflow-y-auto z-[100]">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-4 text-2xl mb-4">
             <div className={`p-3 rounded-xl bg-${color}/10 text-${color}`}>
