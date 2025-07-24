@@ -1946,10 +1946,66 @@ All colors MUST be HSL.
     animation-fill-mode: forwards;
   }
 
-  /* Voice Recording Animation */
+  /* Enhanced Voice Recording Animation */
   .voice-recording-container {
     position: relative;
     display: inline-block;
+    transform: translateZ(0); /* Hardware acceleration */
+  }
+
+  .recording-glow-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    border: 3px solid hsl(var(--primary) / 0.2);
+    border-radius: 50%;
+    animation: glow-ring-pulse 2s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  @keyframes glow-ring-pulse {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(0.8);
+      opacity: 0.3;
+      border-color: hsl(var(--primary) / 0.2);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 1;
+      border-color: hsl(var(--primary) / 0.8);
+    }
+  }
+
+  .pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid hsl(var(--primary) / 0.4);
+    border-radius: 50%;
+    opacity: 0;
+    animation: pulse-ring-expand 3s ease-out infinite;
+  }
+
+  .pulse-ring-1 { animation-delay: 0s; }
+  .pulse-ring-2 { animation-delay: 1s; }
+  .pulse-ring-3 { animation-delay: 2s; }
+
+  @keyframes pulse-ring-expand {
+    0% {
+      width: 20px;
+      height: 20px;
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      width: 80px;
+      height: 80px;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+    }
   }
 
   .animated-content-recording {
@@ -1971,19 +2027,25 @@ All colors MUST be HSL.
 
   .voice-waves-indicator {
     position: absolute;
-    bottom: -8px;
+    bottom: -12px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 2px;
+    z-index: 2;
   }
 
   .wave-line {
-    width: 2px;
-    height: 4px;
-    background: hsl(var(--primary));
-    border-radius: 1px;
-    animation: wave-line-bounce 1.5s ease-in-out infinite;
+    width: 3px;
+    background: linear-gradient(to top, hsl(var(--primary)), hsl(var(--accent)));
+    border-radius: 2px;
+    animation: wave-line-bounce 1.2s ease-in-out infinite;
+    box-shadow: 0 0 8px hsl(var(--primary) / 0.4);
+  }
+
+  .wave-line.enhanced {
+    width: 4px;
+    filter: blur(0.5px);
   }
 
   @keyframes wave-line-bounce {
@@ -2300,6 +2362,349 @@ All colors MUST be HSL.
     .message-dots {
       top: -3px;
       right: -3px;
+    }
+  }
+
+  /* Enhanced AI Processing Styles */
+  .ai-glow-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, hsl(var(--accent) / 0.15), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ai-glow-pulse 3s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  @keyframes ai-glow-pulse {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(0.8);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.3);
+      opacity: 1;
+    }
+  }
+
+  .synaptic-connections {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .synaptic-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, hsl(var(--accent) / 0.6), transparent);
+    transform-origin: left center;
+    animation: synaptic-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes synaptic-pulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: translate(0, -50%) scaleX(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(0, -50%) scaleX(1.2);
+    }
+  }
+
+  .processing-indicator {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    gap: 2px;
+    z-index: 2;
+  }
+
+  .processing-dot {
+    width: 4px;
+    height: 4px;
+    background: hsl(var(--accent));
+    border-radius: 50%;
+    animation: processing-dot-flow 1.8s ease-in-out infinite;
+    box-shadow: 0 0 6px hsl(var(--accent) / 0.6);
+  }
+
+  .dot-1 { animation-delay: 0s; }
+  .dot-2 { animation-delay: 0.3s; }
+  .dot-3 { animation-delay: 0.6s; }
+
+  @keyframes processing-dot-flow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.4);
+    }
+  }
+
+  /* Enhanced Analytics Styles */
+  .analytics-glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(circle, hsl(var(--primary) / 0.12), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: analytics-bg-pulse 2.5s ease-in-out infinite;
+    z-index: 0;
+  }
+
+  @keyframes analytics-bg-pulse {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 1;
+    }
+  }
+
+  .chart-bar.enhanced {
+    width: 4px;
+    background: linear-gradient(to top, 
+      hsl(var(--primary) / 0.8), 
+      hsl(var(--primary)), 
+      hsl(var(--accent) / 0.9)
+    );
+    border-radius: 2px;
+    box-shadow: 
+      0 0 8px hsl(var(--primary) / 0.5),
+      inset 0 1px 0 hsl(var(--primary-glow) / 0.8);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chart-bar.enhanced::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: hsl(var(--accent));
+    animation: bar-shine 2s ease-in-out infinite;
+  }
+
+  @keyframes bar-shine {
+    0%, 100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .data-flow-lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .flow-line {
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(to right, 
+      transparent, 
+      hsl(var(--primary) / 0.6), 
+      transparent
+    );
+    animation: flow-line-move 3s ease-in-out infinite;
+  }
+
+  .flow-line:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    transform: rotate(15deg);
+  }
+
+  .flow-line:nth-child(2) {
+    top: 60%;
+    right: 10%;
+    transform: rotate(-20deg);
+  }
+
+  .flow-line:nth-child(3) {
+    bottom: 25%;
+    left: 15%;
+    transform: rotate(45deg);
+  }
+
+  @keyframes flow-line-move {
+    0%, 100% {
+      opacity: 0;
+      transform: translateX(-20px) scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+  }
+
+  .analytics-particles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .analytics-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: hsl(var(--accent));
+    border-radius: 50%;
+    animation: analytics-particle-float 4s ease-in-out infinite;
+    box-shadow: 0 0 6px hsl(var(--accent) / 0.8);
+  }
+
+  .analytics-particle:nth-child(1) {
+    top: 20%;
+    left: 80%;
+    animation-delay: 0s;
+  }
+
+  .analytics-particle:nth-child(2) {
+    top: 70%;
+    left: 20%;
+    animation-delay: 1s;
+  }
+
+  .analytics-particle:nth-child(3) {
+    top: 40%;
+    right: 10%;
+    animation-delay: 2s;
+  }
+
+  .analytics-particle:nth-child(4) {
+    bottom: 20%;
+    left: 60%;
+    animation-delay: 3s;
+  }
+
+  @keyframes analytics-particle-float {
+    0%, 100% {
+      opacity: 0.4;
+      transform: translateY(0) scale(0.8);
+    }
+    25% {
+      opacity: 1;
+      transform: translateY(-15px) scale(1.2);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translateY(-5px) scale(1);
+    }
+    75% {
+      opacity: 1;
+      transform: translateY(-20px) scale(1.3);
+    }
+  }
+
+  /* Mobile Responsive Enhancements */
+  @media (max-width: 768px) {
+    .voice-recording-container,
+    .ai-processing-container,
+    .analytics-container {
+      transform: scale(0.9);
+    }
+
+    .recording-glow-ring {
+      width: 50px;
+      height: 50px;
+    }
+
+    .pulse-ring {
+      max-width: 60px;
+      max-height: 60px;
+    }
+
+    .wave-line.enhanced {
+      width: 3px;
+    }
+
+    .chart-bar.enhanced {
+      width: 3px;
+    }
+
+    .ai-glow-background {
+      width: 60px;
+      height: 60px;
+    }
+
+    .analytics-glow-bg {
+      width: 55px;
+      height: 55px;
+    }
+
+    .synaptic-line {
+      width: 20px;
+    }
+
+    .flow-line {
+      width: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .voice-recording-container,
+    .ai-processing-container,
+    .analytics-container {
+      transform: scale(0.8);
+    }
+
+    .recording-glow-ring {
+      width: 40px;
+      height: 40px;
+      border-width: 2px;
+    }
+
+    .wave-line.enhanced {
+      width: 2px;
+    }
+
+    .chart-bar.enhanced {
+      width: 2px;
+    }
+
+    .processing-dot {
+      width: 3px;
+      height: 3px;
+    }
+
+    .analytics-particle {
+      width: 2px;
+      height: 2px;
     }
   }
 }

@@ -41,42 +41,67 @@ export const AnimatedContentIcon: FC<AnimatedContentIconProps> = ({
   );
 };
 
-// Voice Recording Animation with Sound Waves
+// Enhanced Voice Recording Animation with Multiple Waves
 export const VoiceRecordingIcon = () => (
   <div className="voice-recording-container">
+    <div className="recording-glow-ring"></div>
     <AnimatedContentIcon 
-      icon={<Mic className="text-primary" />}
+      icon={<Mic className="text-primary relative z-10" />}
       type="recording"
       size="lg"
     />
     <div className="voice-waves-indicator">
-      {[...Array(5)].map((_, i) => (
+      {[...Array(8)].map((_, i) => (
         <div 
           key={i}
-          className="wave-line"
-          style={{ animationDelay: `${i * 0.1}s` }}
+          className="wave-line enhanced"
+          style={{ 
+            animationDelay: `${i * 0.1}s`,
+            height: `${4 + (i % 3) * 2}px`
+          }}
         />
       ))}
     </div>
+    <div className="pulse-ring pulse-ring-1"></div>
+    <div className="pulse-ring pulse-ring-2"></div>
+    <div className="pulse-ring pulse-ring-3"></div>
   </div>
 );
 
-// AI Brain Processing Animation
+// Enhanced AI Brain Processing Animation
 export const AIProcessingIcon = () => (
   <div className="ai-processing-container">
+    <div className="ai-glow-background"></div>
     <AnimatedContentIcon 
-      icon={<Brain className="text-accent" />}
+      icon={<Brain className="text-accent relative z-10" />}
       type="ai-processing"
       size="lg"
     />
     <div className="neural-pulses">
-      {[...Array(3)].map((_, i) => (
+      {[...Array(5)].map((_, i) => (
         <div 
           key={i}
           className="neural-pulse"
-          style={{ animationDelay: `${i * 0.5}s` }}
+          style={{ animationDelay: `${i * 0.3}s` }}
         />
       ))}
+    </div>
+    <div className="synaptic-connections">
+      {[...Array(6)].map((_, i) => (
+        <div 
+          key={i}
+          className="synaptic-line"
+          style={{ 
+            animationDelay: `${i * 0.2}s`,
+            transform: `rotate(${i * 60}deg)`
+          }}
+        />
+      ))}
+    </div>
+    <div className="processing-indicator">
+      <div className="processing-dot dot-1"></div>
+      <div className="processing-dot dot-2"></div>
+      <div className="processing-dot dot-3"></div>
     </div>
   </div>
 );
@@ -114,23 +139,42 @@ export const InventoryIcon = () => (
   </div>
 );
 
-// Analytics Dashboard Animation
+// Enhanced Analytics Dashboard Animation
 export const AnalyticsIcon = () => (
   <div className="analytics-container">
+    <div className="analytics-glow-bg"></div>
     <AnimatedContentIcon 
-      icon={<BarChart3 className="text-primary" />}
+      icon={<BarChart3 className="text-primary relative z-10" />}
       type="analytics"
       size="lg"
     />
     <div className="chart-bars">
+      {[...Array(6)].map((_, i) => (
+        <div 
+          key={i}
+          className="chart-bar enhanced"
+          style={{ 
+            animationDelay: `${i * 0.15}s`,
+            height: `${15 + (i % 4) * 8}px`
+          }}
+        />
+      ))}
+    </div>
+    <div className="data-flow-lines">
+      {[...Array(3)].map((_, i) => (
+        <div 
+          key={i}
+          className="flow-line"
+          style={{ animationDelay: `${i * 0.4}s` }}
+        />
+      ))}
+    </div>
+    <div className="analytics-particles">
       {[...Array(4)].map((_, i) => (
         <div 
           key={i}
-          className="chart-bar"
-          style={{ 
-            animationDelay: `${i * 0.2}s`,
-            height: `${20 + Math.random() * 30}%`
-          }}
+          className="analytics-particle"
+          style={{ animationDelay: `${i * 0.3}s` }}
         />
       ))}
     </div>
