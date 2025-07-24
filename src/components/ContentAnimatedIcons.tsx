@@ -48,7 +48,7 @@ export const AIProcessingIcon = () => <div className="ai-processing-container">
     <div className="ai-glow-background"></div>
     <AnimatedContentIcon icon={<Brain className="text-accent relative z-10" />} type="ai-processing" size="lg" />
     <div className="neural-pulses">
-      {[...Array(5)].map((_, i) => {})}
+      {[...Array(5)].map((_, i) => <div key={i} className="neural-pulse" style={{animationDelay: `${i * 0.1}s`}} />)}
     </div>
     <div className="synaptic-connections">
       {[...Array(6)].map((_, i) => <div key={i} className="synaptic-line" style={{
