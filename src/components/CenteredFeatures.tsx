@@ -293,38 +293,34 @@ Sistema procesa automáticamente:
     svgComponent: <SecuritySVG />,
     color: 'primary' as const,
     modalContent: {
-      subtitle: "Fortaleza digital corporativa",
-      vision: "Una protección invisible pero impenetrable que resguarda cada byte de información crítica de GM mientras facilita el trabajo diario de su equipo operativo.",
-      security: "Arquitectura de seguridad diseñada específicamente para cumplir con todos los estándares de ciberseguridad de General Motors Global. Certificaciones ISO 27001 y SOC 2 Type II incluidas.",
+      subtitle: "Seguridad simple y efectiva",
+      vision: "Protección básica pero sólida para los datos de GM San Luis Potosí.",
       features: [{
         icon: <Lock className="h-5 w-5" />,
-        title: "Encriptación GM Standard",
-        description: "Protección de grado corporativo con estándares de seguridad equivalentes a los sistemas financieros globales."
+        title: "Conexión SSL",
+        description: "Todas las comunicaciones están encriptadas con certificados SSL de GM."
       }, {
-        icon: <Users className="h-5 w-5" />,
-        title: "Roles Corporativos",
-        description: "Integración con Active Directory GM para control granular según jerarquía y responsabilidades corporativas."
+        icon: <Database className="h-5 w-5" />,
+        title: "Base de Datos MySQL",
+        description: "Base de datos en blanco proporcionada por GM para almacenar la información del sistema."
       }, {
         icon: <FileText className="h-5 w-5" />,
-        title: "Auditoría Completa",
-        description: "Registro detallado de cada acción para cumplimiento Sarbanes-Oxley y auditorías corporativas."
+        title: "Audio en Servidor GM",
+        description: "Todos los archivos de audio se guardan directamente en servidores de GM San Luis Potosí."
       }, {
-        icon: <Monitor className="h-5 w-5" />,
-        title: "Monitoreo Corporativo",
-        description: "Vigilancia 24/7 integrada con sistemas de seguridad GM Global para protección proactiva."
+        icon: <Users className="h-5 w-5" />,
+        title: "Niveles de Usuario",
+        description: "Control de acceso simple según el rol de cada empleado en la planta."
       }],
-      impact: "Su información crítica está protegida con los más altos estándares corporativos de GM. Cumple automáticamente con todas las normativas globales mientras su equipo trabaja con total libertad y confianza en un entorno digital seguro.",
-      example: `Control de acceso por roles:
-Gerente Planta: ✓ Acceso total a reportes y métricas
-Supervisor Área: ✓ Ve solo su área de responsabilidad  
-Técnico Nivel 3: ✓ Registra bitácoras, no ve costos
-Técnico Nivel 1: ✓ Solo consulta, no modifica
+      impact: "Sistema seguro y simple que mantiene toda la información dentro de GM sin complicaciones técnicas.",
+      example: `Niveles de acceso simples:
 
-Cada acción queda registrada:
-- Usuario: [Empleado GM]
-- Timestamp: [Fecha/Hora exacta]  
-- Acción: [Detalle específico]
-- IP/Dispositivo: [Trazabilidad completa]`
+Administrador: ✓ Acceso completo al sistema
+Supervisor: ✓ Ve su área y puede aprobar reportes
+Técnico Senior: ✓ Crea y edita bitácoras
+Técnico Junior: ✓ Solo consulta información
+
+Todo se guarda en servidores de GM con SSL activo.`
     }
   }];
   return <div className={`centered-features-section ${isVisible ? 'visible' : ''}`}>
