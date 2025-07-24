@@ -493,27 +493,55 @@ const Index = () => {
                         Seguridad y Control de Accesos
                       </DialogTitle>
                     </DialogHeader>
-                    <div className="space-y-4 text-foreground">
-                      <ul className="space-y-3">
-                        <li className="flex items-start gap-3">
-                          <div className="p-1 rounded bg-primary/10 mt-1">
-                            <UserCog className="h-3 w-3 text-primary" />
-                          </div>
-                          <span>Roles personalizables por tipo de usuario: técnico, supervisor, gerente.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="p-1 rounded bg-primary/10 mt-1">
-                            <Shield className="h-3 w-3 text-primary" />
-                          </div>
-                          <span>Control total sobre quién puede ver, editar, aprobar o eliminar contenido.</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                          <div className="p-1 rounded bg-primary/10 mt-1">
-                            <FileText className="h-3 w-3 text-primary" />
-                          </div>
-                          <span>Registro detallado de actividad por usuario (bitácora de auditoría).</span>
-                        </li>
-                      </ul>
+                     <div className="space-y-4 text-foreground">
+                       <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-4">
+                         <h5 className="font-semibold text-primary mb-2 flex items-center gap-2">
+                           <Database className="h-4 w-4" />
+                           Infraestructura de GM San Luis Potosí
+                         </h5>
+                         <p className="text-sm text-muted-foreground">
+                           GM deberá proporcionar un servidor MySQL en blanco con accesos administrativos para montar la base de datos Juntify en su propio servidor corporativo.
+                         </p>
+                       </div>
+                       
+                       <ul className="space-y-3">
+                         <li className="flex items-start gap-3">
+                           <div className="p-1 rounded bg-primary/10 mt-1">
+                             <Shield className="h-3 w-3 text-primary" />
+                           </div>
+                           <span><strong>Certificados SSL/TLS:</strong> Conexiones encriptadas end-to-end para todas las comunicaciones.</span>
+                         </li>
+                         <li className="flex items-start gap-3">
+                           <div className="p-1 rounded bg-primary/10 mt-1">
+                             <Database className="h-3 w-3 text-primary" />
+                           </div>
+                           <span><strong>Base de Datos Propia:</strong> MySQL en servidor de GM con accesos controlados y backup automático.</span>
+                         </li>
+                         <li className="flex items-start gap-3">
+                           <div className="p-1 rounded bg-primary/10 mt-1">
+                             <Headphones className="h-3 w-3 text-primary" />
+                           </div>
+                           <span><strong>Audios Seguros:</strong> Grabaciones almacenadas en el mismo servidor de GM, sin transferencia a terceros.</span>
+                         </li>
+                         <li className="flex items-start gap-3">
+                           <div className="p-1 rounded bg-primary/10 mt-1">
+                             <UserCog className="h-3 w-3 text-primary" />
+                           </div>
+                           <span><strong>Roles Personalizables:</strong> Control granular por tipo de usuario: técnico, supervisor, gerente, administrador.</span>
+                         </li>
+                         <li className="flex items-start gap-3">
+                           <div className="p-1 rounded bg-primary/10 mt-1">
+                             <Lock className="h-3 w-3 text-primary" />
+                           </div>
+                           <span><strong>Control de Accesos:</strong> Autenticación multi-factor y permisos específicos por módulo.</span>
+                         </li>
+                         <li className="flex items-start gap-3">
+                           <div className="p-1 rounded bg-primary/10 mt-1">
+                             <Monitor className="h-3 w-3 text-primary" />
+                           </div>
+                           <span><strong>Auditoría Completa:</strong> Log detallado de todas las acciones para cumplimiento normativo.</span>
+                         </li>
+                       </ul>
                     </div>
                   </DialogContent>
                 </Dialog>
