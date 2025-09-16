@@ -449,21 +449,21 @@ const Index = () => {
             </li>
           </ul>
           {/* Oportunidad de inversión */}
-          <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 shadow-lg text-center space-y-4">
-            <div className="text-2xl font-bold text-primary">Invierte $150,000 MXN y obtén el 15% de cada venta de software</div>
-            <div className="text-lg text-foreground/90">Participa como socio estratégico en Juntify. Tu inversión impulsa la etapa comercial y te da derecho al 15% del total de cada venta de software realizada a empresas industriales.</div>
-            <div className="bg-white/30 rounded-xl p-4 border border-primary/10 text-left max-w-xl mx-auto">
-              <div className="font-semibold text-primary mb-1">¿Cómo funciona el retorno?</div>
-              <ul className="list-disc pl-6 text-base text-foreground/90 space-y-1">
-                <li>Desde la <span className="font-bold">primera venta</span> de una empresa industrial, recibes el 15% del total facturado por la venta de software y licencias.</li>
-                <li>Ejemplo: Si se concreta una venta estándar de <span className="font-bold">$1,438,000 MXN</span> el primer año, tu retorno inmediato sería de <span className="font-bold text-primary">$215,700 MXN</span> (15% del total).</li>
-                <li>En los años siguientes, por cada cliente activo, tu retorno anual estimado sería de <span className="font-bold text-primary">$88,200 MXN</span> (15% de $588,000 MXN por licencias de usuarios).</li>
-                <li>El retorno crece con cada nueva empresa que adopte Juntify.</li>
-              </ul>
-              <div className="mt-2 text-xs text-muted-foreground">*Cálculos estimados, sujetos a resultados reales y deducciones fiscales. Documentación y proyecciones disponibles para revisión.*</div>
+            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 shadow-lg text-center space-y-4">
+              <div className="text-2xl font-bold text-primary">Invierte $150,000 MXN y obtén el 10% de cada venta de software</div>
+              <div className="text-lg text-foreground/90">Participa como socio estratégico en Juntify. Tu inversión impulsa la etapa comercial y te da derecho al 10% del total de cada venta de software y licencias realizada a empresas industriales.</div>
+              <div className="bg-white/30 rounded-xl p-4 border border-primary/10 text-left max-w-xl mx-auto">
+                <div className="font-semibold text-primary mb-1">¿Cómo funciona el retorno?</div>
+                <ul className="list-disc pl-6 text-base text-foreground/90 space-y-1">
+                  <li>Desde la <span className="font-bold">primera venta</span> de una empresa industrial, recibes el 10% del total facturado por la venta de software y licencias.</li>
+                  <li>Ejemplo: Si se concreta una venta estándar de <span className="font-bold">$1,438,000 MXN</span> el primer año, tu retorno inmediato sería de <span className="font-bold text-primary">$143,800 MXN</span> (10% del total).</li>
+                  <li>En los años siguientes, por cada cliente activo, tu retorno anual estimado sería de <span className="font-bold text-primary">$58,800 MXN</span> (10% de $588,000 MXN por licencias de usuarios).</li>
+                  <li>El retorno crece con cada nueva empresa que adopte Juntify.</li>
+                </ul>
+                <div className="mt-2 text-xs text-muted-foreground">*Cálculos estimados, sujetos a resultados reales y deducciones fiscales. Documentación y proyecciones disponibles para revisión.*</div>
+              </div>
+              <div className="mt-4 text-lg font-semibold text-accent">¡Tu inversión se recupera potencialmente desde la primera venta!</div>
             </div>
-            <div className="mt-4 text-lg font-semibold text-accent">¡Tu inversión se recupera potencialmente desde la primera venta!</div>
-          </div>
           {/* Botón y modal de desglose real de inversión removidos por solicitud del usuario */}
           <div className="mt-6 p-4 rounded-xl bg-primary/10 border border-primary/20 text-primary font-semibold text-center text-lg">
             <span>
@@ -543,6 +543,8 @@ const Index = () => {
               <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-4 rounded-xl border border-primary/20 mb-2">
                 <div className="font-semibold text-primary mb-1">Ejemplo de cotización estándar:</div>
                 <div className="text-foreground/90">Venta de plataforma industrial Juntify, integración de IA, panel de mantenimiento, capacitación y soporte, infraestructura dedicada.</div>
+                  <div className="font-semibold text-primary mb-1">Ejemplo de cotización real a Linamar:</div>
+                  <div className="text-foreground/90">Cotización presentada a Linamar para venta de plataforma industrial Juntify, integración de IA, panel de mantenimiento, capacitación y soporte, infraestructura dedicada.</div>
               </div>
               <ul className="list-disc pl-6 text-base text-foreground/90 space-y-1">
                 <li><span className="font-bold">Primer año:</span> Licencia anual empresarial $850,000 MXN + 10 usuarios grabadores ($2,500/mes c/u = $300,000 MXN/año) + 30 usuarios analistas ($800/mes c/u = $288,000 MXN/año)</li>
@@ -552,6 +554,7 @@ const Index = () => {
               </ul>
               <div className="mt-4 text-sm text-muted-foreground">
                 *Escenario basado en cotización estándar de mercado industrial. No es una venta realizada ni validada, sino la expectativa promedio por empresa.*
+                  *Escenario basado en cotización real presentada a Linamar. No es una venta realizada ni validada, sino la expectativa promedio por empresa interesada.*
               </div>
             </div>
           </div>
@@ -572,11 +575,10 @@ const Index = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-lg px-16 py-6 text-white font-medium shadow-xl transition-all duration-300 transform hover:scale-105" 
+                  size="lg"
+                  className="bg-gradient-to-r from-primary to-primary-glow hover:from-primary-glow hover:to-primary text-lg px-16 py-6 text-white font-medium shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={() => {
-                    const message = "JUNTIFY - PROPUESTA DE INVERSIÓN PARA MARIO HERNÁNDEZ - ALAN AZUARA - OPORTUNIDAD DE INVERSIÓN: $150,000 MXN solicitados - ¡Interesado en esta oportunidad de inversión en Juntify! - Mario Hernández";
-                    const whatsappUrl = `https://wa.me/5214448481209?text=${encodeURIComponent(message.replace('Mario Hernández', 'Alan Azuara'))}`;
+                    const whatsappUrl = `https://wa.me/5214448481209?text=${encodeURIComponent('JUNTIFY - PROPUESTA DE INVERSIÓN PARA ALAN AZUARA - OPORTUNIDAD DE INVERSIÓN: $150,000 MXN solicitados - ¡Interesado en esta oportunidad de inversión en Juntify! - Alan Azuara')}`;
                     window.open(whatsappUrl, '_blank');
                   }}
                 >
