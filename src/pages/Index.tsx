@@ -183,7 +183,7 @@ const Index = () => {
                       <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-4 border border-primary/20 flex items-center gap-4">
                         <Smartphone className="h-8 w-8 text-primary" />
                         <div>
-                          <div className="text-lg font-medium text-primary mb-1">Imagina esto en GM San Luis Potosí:</div>
+                          <div className="text-lg font-medium text-primary mb-1">Imagina esto en Linamar San Luis Potosí:</div>
                           <div className="text-base text-muted-foreground">Un operador inicia su turno, toma su smartphone y simplemente habla: “Revisión de bomba hidráulica, línea 4, presión baja detectada, se ajusta válvula, tiempo de intervención: 12 minutos”.</div>
                         </div>
                       </div>
@@ -208,7 +208,7 @@ const Index = () => {
                       <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-4 border border-accent/20 flex items-center gap-4">
                         <UserCog className="h-8 w-8 text-accent" />
                         <div>
-                          <div className="text-base text-accent font-semibold mb-1">Caso real GM:</div>
+                          <div className="text-base text-accent font-semibold mb-1">Caso real Linamar (cotización presentada):</div>
                           <div className="text-sm text-muted-foreground">En la planta, los supervisores han reducido en un 95% los errores de registro y han logrado trazabilidad total de cada intervención, todo sin escribir una sola palabra.</div>
                         </div>
                       </div>
@@ -251,7 +251,7 @@ const Index = () => {
                       <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-4 border border-accent/20 flex items-center gap-4">
                         <MessageCircle className="h-8 w-8 text-accent" />
                         <div>
-                          <div className="text-lg font-medium text-accent mb-1">Imagina esto en GM:</div>
+                          <div className="text-lg font-medium text-accent mb-1">Imagina esto en Linamar:</div>
                           <div className="text-base text-muted-foreground">Un gerente pregunta: “¿Qué tareas quedaron pendientes en la reunión de las 7am?” La IA responde en segundos, citando el audio y mostrando el contexto exacto.</div>
                         </div>
                       </div>
@@ -276,7 +276,7 @@ const Index = () => {
                       <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-4 border border-primary/20 flex items-center gap-4">
                         <UserCog className="h-8 w-8 text-primary" />
                         <div>
-                          <div className="text-base text-primary font-semibold mb-1">Caso real GM:</div>
+                          <div className="text-base text-primary font-semibold mb-1">Caso real Linamar (cotización presentada):</div>
                           <div className="text-sm text-muted-foreground">Los analistas de mantenimiento han reducido en un 70% el tiempo de búsqueda de información crítica para auditorías y reportes.</div>
                         </div>
                       </div>
@@ -319,7 +319,7 @@ const Index = () => {
                       <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-4 border border-primary/20 flex items-center gap-4">
                         <Mic className="h-8 w-8 text-primary" />
                         <div>
-                          <div className="text-lg font-medium text-primary mb-1">En GM, cada intervención cuenta:</div>
+                          <div className="text-lg font-medium text-primary mb-1">En Linamar, cada intervención cuenta:</div>
                           <div className="text-base text-muted-foreground">Un técnico reporta verbalmente una reparación urgente. La IA registra, clasifica y documenta todo automáticamente, sin papel ni errores.</div>
                         </div>
                       </div>
@@ -344,7 +344,7 @@ const Index = () => {
                       <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-xl p-4 border border-accent/20 flex items-center gap-4">
                         <UserCog className="h-8 w-8 text-accent" />
                         <div>
-                          <div className="text-base text-accent font-semibold mb-1">Caso real GM:</div>
+                          <div className="text-base text-accent font-semibold mb-1">Caso real Linamar (cotización presentada):</div>
                           <div className="text-sm text-muted-foreground">La digitalización de bitácoras ha eliminado el 100% de los registros ilegibles y ha acelerado la generación de reportes de mantenimiento.</div>
                         </div>
                       </div>
@@ -412,7 +412,7 @@ const Index = () => {
                       <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-4 border border-primary/20 flex items-center gap-4">
                         <BarChart3 className="h-8 w-8 text-primary" />
                         <div>
-                          <div className="text-base text-primary font-semibold mb-1">Caso real GM:</div>
+                          <div className="text-base text-primary font-semibold mb-1">Caso real Linamar (cotización presentada):</div>
                           <div className="text-sm text-muted-foreground">La consolidación de datos ha permitido reducir en un 70% el tiempo de generación de reportes y ha mejorado la toma de decisiones operativas.</div>
                         </div>
                       </div>
